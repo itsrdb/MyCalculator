@@ -12,8 +12,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    public void toastMsg(String msg) {
+
+        Toast toast = Toast.makeText(this, msg, Toast.LENGTH_LONG);
+        toast.show();
+
+    }
 
     public static double eval(final String str) {
         return new Object() {
@@ -375,7 +383,8 @@ public class MainActivity extends AppCompatActivity {
             int id = item.getItemId();
 
             //noinspection SimplifiableIfStatement
-            if (id == R.id.action_settings) {
+            if (id == R.id.action_favorite) {
+                toastMsg("made with love");
                 return true;
             }
 
